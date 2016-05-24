@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2014 10:41:40" ReportInfo.Modified="05/29/2014 11:17:40" ReportInfo.CreatorVersion="2014.2.3.0">
+  <Dictionary>
+    <TableDataSource Name="auth" ReferenceName="mybaseDataSet.auth" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="login" DataType="System.String"/>
+      <Column Name="pass" DataType="System.String"/>
+      <Column Name="perm" DataType="System.Int32"/>
+      <Column Name="fio" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="chkdate" ReferenceName="mybaseDataSet.chkdate" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="inv" DataType="System.Int32"/>
+      <Column Name="date" DataType="System.DateTime"/>
+      <Column Name="sotr" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="device" ReferenceName="mybaseDataSet.device" DataType="System.Int32" Enabled="true">
+      <Column Name="invn" DataType="System.Int32"/>
+      <Column Name="sn" DataType="System.String"/>
+      <Column Name="ein" DataType="System.Int32"/>
+      <Column Name="opis" DataType="System.String"/>
+      <Column Name="kab" DataType="System.Int32"/>
+      <Column Name="check" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="stoim" DataType="System.Int32"/>
+      <Column Name="naznach" DataType="System.String"/>
+      <Column Name="marka" DataType="System.String"/>
+      <Column Name="otdel" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="Expr1" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="doc" ReferenceName="mybaseDataSet.doc" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="nomer" DataType="System.Int32"/>
+      <Column Name="data" DataType="System.DateTime"/>
+    </TableDataSource>
+    <TableDataSource Name="kabinet" ReferenceName="mybaseDataSet.kabinet" DataType="System.Int32" Enabled="true">
+      <Column Name="idkab" DataType="System.Int32"/>
+      <Column Name="kab" DataType="System.Int32"/>
+      <Column Name="otdel" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="mark" ReferenceName="mybaseDataSet.mark" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="marka" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="type" ReferenceName="mybaseDataSet.type" DataType="System.Int32" Enabled="true">
+      <Column Name="idtype" DataType="System.Int32"/>
+      <Column Name="name" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="user" ReferenceName="mybaseDataSet.user" DataType="System.Int32" Enabled="true">
+      <Column Name="iduser" DataType="System.Int32"/>
+      <Column Name="fio" DataType="System.String"/>
+      <Column Name="post" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="perem" ReferenceName="mybaseDataSet.perem" DataType="System.Int32" Enabled="true">
+      <Column Name="invn" DataType="System.Int32"/>
+      <Column Name="nomer" DataType="System.Int32"/>
+      <Column Name="data" DataType="System.DateTime"/>
+      <Column Name="fio" DataType="System.String"/>
+      <Column Name="mesto" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text9" Left="283.5" Top="9.45" Width="122.85" Height="18.9" Text="Отчет №1" Font="Arial, 14pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="Text4" Left="151.2" Width="122.85" Height="28.35" Text="Инвентарный №"/>
+      <TextObject Name="Text6" Left="274.05" Width="179.55" Height="18.9" Text="ФИО"/>
+      <TextObject Name="Text8" Left="453.6" Width="132.3" Height="18.9" Text="Подразделение"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="74.15" Width="718.2" Height="37.8" Condition="[device.kab]">
+      <TextObject Name="Text10" Width="94.5" Height="18.9" Text="[[device.kab]]"/>
+      <DataBand Name="Data1" Top="115.95" Width="718.2" Height="28.35" DataSource="device">
+        <TextObject Name="Text1" Left="9.45" Top="9.45" Width="141.75" Height="18.9" Text="[device.name]"/>
+        <TextObject Name="Text3" Left="151.2" Top="9.45" Width="122.85" Height="18.9" Text="[device.invn]"/>
+        <TextObject Name="Text5" Left="274.05" Top="9.45" Width="179.55" Height="18.9" Text="[device.Expr1]"/>
+        <TextObject Name="Text7" Left="453.6" Top="9.45" Width="245.7" Height="18.9" Text="[device.otdel]"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="148.3" Width="718.2" Height="37.8"/>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="190.1" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

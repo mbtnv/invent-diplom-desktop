@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/26/2014 05:44:57" ReportInfo.Modified="05/26/2014 06:06:26" ReportInfo.CreatorVersion="2014.2.3.0">
+  <Dictionary>
+    <TableDataSource Name="auth" ReferenceName="mybaseDataSet.auth" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="login" DataType="System.String"/>
+      <Column Name="pass" DataType="System.String"/>
+      <Column Name="perm" DataType="System.Int32"/>
+      <Column Name="fio" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="chkdate" ReferenceName="mybaseDataSet.chkdate" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="inv" DataType="System.Int32"/>
+      <Column Name="date" DataType="System.DateTime"/>
+      <Column Name="sotr" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="device" ReferenceName="mybaseDataSet.device" DataType="System.Int32" Enabled="true">
+      <Column Name="invn" DataType="System.Int32"/>
+      <Column Name="sn" DataType="System.String"/>
+      <Column Name="ein" DataType="System.Int32"/>
+      <Column Name="opis" DataType="System.String"/>
+      <Column Name="kab" DataType="System.Int32"/>
+      <Column Name="check" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="stoim" DataType="System.Int32"/>
+      <Column Name="naznach" DataType="System.String"/>
+      <Column Name="marka" DataType="System.String"/>
+      <Column Name="otdel" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="Expr1" DataType="System.String"/>
+      <Column Name="date" DataType="System.DateTime"/>
+    </TableDataSource>
+    <TableDataSource Name="doc" ReferenceName="mybaseDataSet.doc" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="nomer" DataType="System.Int32"/>
+      <Column Name="data" DataType="System.DateTime"/>
+    </TableDataSource>
+    <TableDataSource Name="kabinet" ReferenceName="mybaseDataSet.kabinet" DataType="System.Int32" Enabled="true">
+      <Column Name="idkab" DataType="System.Int32"/>
+      <Column Name="kab" DataType="System.Int32"/>
+      <Column Name="otdel" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="mark" ReferenceName="mybaseDataSet.mark" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="marka" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="type" ReferenceName="mybaseDataSet.type" DataType="System.Int32" Enabled="true">
+      <Column Name="idtype" DataType="System.Int32"/>
+      <Column Name="name" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="user" ReferenceName="mybaseDataSet.user" DataType="System.Int32" Enabled="true">
+      <Column Name="iduser" DataType="System.Int32"/>
+      <Column Name="fio" DataType="System.String"/>
+      <Column Name="post" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8"/>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="567">
+      <TableObject Name="Table1" Left="75.6" Top="75.6" Width="491.4" Height="94.5">
+        <TableColumn Name="Column1"/>
+        <TableColumn Name="Column2"/>
+        <TableColumn Name="Column3"/>
+        <TableColumn Name="Column4"/>
+        <TableColumn Name="Column5" Width="94.5"/>
+        <TableColumn Name="Column6"/>
+        <TableColumn Name="Column7"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Text="Invent"/>
+          <TableCell Name="Cell2"/>
+          <TableCell Name="Cell3"/>
+          <TableCell Name="Cell4"/>
+          <TableCell Name="Cell5"/>
+          <TableCell Name="Cell26"/>
+          <TableCell Name="Cell27"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell6" Text="[device.invn]"/>
+          <TableCell Name="Cell7" Text="[device.sn]"/>
+          <TableCell Name="Cell8"/>
+          <TableCell Name="Cell9"/>
+          <TableCell Name="Cell10"/>
+          <TableCell Name="Cell28"/>
+          <TableCell Name="Cell29"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell11"/>
+          <TableCell Name="Cell12"/>
+          <TableCell Name="Cell13"/>
+          <TableCell Name="Cell14"/>
+          <TableCell Name="Cell15"/>
+          <TableCell Name="Cell30"/>
+          <TableCell Name="Cell31"/>
+        </TableRow>
+        <TableRow Name="Row4">
+          <TableCell Name="Cell16"/>
+          <TableCell Name="Cell17"/>
+          <TableCell Name="Cell18"/>
+          <TableCell Name="Cell19"/>
+          <TableCell Name="Cell20"/>
+          <TableCell Name="Cell32"/>
+          <TableCell Name="Cell33"/>
+        </TableRow>
+        <TableRow Name="Row5">
+          <TableCell Name="Cell21"/>
+          <TableCell Name="Cell22"/>
+          <TableCell Name="Cell23"/>
+          <TableCell Name="Cell24"/>
+          <TableCell Name="Cell25"/>
+          <TableCell Name="Cell34"/>
+          <TableCell Name="Cell35"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="645.15" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>
